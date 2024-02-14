@@ -1,0 +1,34 @@
+CREATE TABLE `lmsproject`.`admin` (
+  `id` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NULL,
+  `name` VARCHAR(45) NULL,
+  `bathday` varchar(30) null,
+  `role` VARCHAR(45) NULL,
+   `phone_Number` VARCHAR(45) null,
+   `address`  VARCHAR(255) null,
+  `register` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `lmsproject`.`student` (
+  `id` VARCHAR(255) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(50),
+  `password` VARCHAR(45) NOT NULL,
+  `phoneNumber` VARCHAR(45),
+  `role` VARCHAR(45),
+  `major` VARCHAR(255) NOT NULL,
+  `submajor` VARCHAR(255),
+  `grade` int NOT NULL,
+  PRIMARY KEY (`id`));
+
+CREATE TABLE `lmsproject`.`professor` (
+  `id` VARCHAR(255) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `phonenumber` VARCHAR(45) NULL,
+  `role` VARCHAR(45) NOT NULL,
+  `major` VARCHAR(45) NOT NULL,
+  `submajor` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`));
